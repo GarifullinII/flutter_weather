@@ -10,14 +10,26 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'Weather',
-            style: TextStyle(color: Colors.black87,),
+            style: TextStyle(
+              color: Colors.black87,
+            ),
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)), // отвечает за расположение в левой части иконки (расскрывающиий список)
-          iconTheme: IconThemeData(color: Colors.black54), // задаем цвет для иконки
+          leading: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons
+                  .menu)), // отвечает за расположение в левой части иконки (расскрывающиий список)
+          iconTheme:
+              IconThemeData(color: Colors.black54), // задаем цвет для иконки
           brightness: Brightness.light, // задаем яркость AppBar
-
+          actions: <Widget>[ // реализация правой иконки
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.settings,
+                )),
+          ],
         ),
         body: null,
       ),
