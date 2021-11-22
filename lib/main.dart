@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)), // отвечает за расположение в левой части иконки (расскрывающиий список)
           iconTheme: IconThemeData(color: Colors.black54), // задаем цвет для иконки
+          brightness: Brightness.light, // задаем яркость AppBar
 
         ),
         body: null,
