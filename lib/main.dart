@@ -43,6 +43,7 @@ Widget _buildBody() {
     child: Column(
       children: <Widget>[
         _headerImage(), // реализуем отдельно данный виджет
+        _weatherDescription(), // реализуем отдельным виджетом описание погоды
       ],
     ),
   );
@@ -57,5 +58,24 @@ Image _headerImage() {
 }
 
 Column _weatherDescription() {
-  return Column();
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: <Widget>[
+      Text(
+        'Monday - November 22',
+        style: TextStyle(
+          fontSize: 32.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Divider(),
+      Text(
+        'Partly cloudy - 7° Probability of Precipitation 2% before 19:00',
+        style: TextStyle(
+          color: Colors.black54,
+          fontSize: 22.0,
+        ),
+      ),
+    ],
+  );
 }
