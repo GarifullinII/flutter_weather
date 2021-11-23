@@ -43,10 +43,17 @@ Widget _buildBody() {
     child: Column(
       children: <Widget>[
         _headerImage(), // реализуем отдельно данный виджет
-        SafeArea(child: Padding(
+        SafeArea(
+            child: Padding(
           padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              _weatherDescription(), // реализуем отдельным виджетом описание погоды
+              _temperature(),
+            ],
+          ),
         )),
-        _weatherDescription(), // реализуем отдельным виджетом описание погоды
       ],
     ),
   );
@@ -78,6 +85,47 @@ Column _weatherDescription() {
           color: Colors.black54,
           fontSize: 22.0,
         ),
+      ),
+    ],
+  );
+}
+
+Row _temperature() {
+  return Row(
+    children: <Widget>[
+      Column(
+        children: <Widget>[
+          Icon(
+            Icons.wb_sunny,
+            color: Colors.yellow,
+          ),
+          SizedBox(
+            width: 16.0,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Text(
+                    '-7C Clear',
+                    style: TextStyle(color: Colors.deepPurple),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Text(
+                    'Samara region, Samara',
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          )
+        ],
       ),
     ],
   );
