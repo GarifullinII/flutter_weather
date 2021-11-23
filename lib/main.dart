@@ -50,7 +50,10 @@ Widget _buildBody() {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               _weatherDescription(), // реализуем отдельным виджетом описание погоды
+              Divider(),
               _temperature(),
+              Divider(),
+              _temperatureForecast(),
             ],
           ),
         )),
@@ -95,39 +98,56 @@ Row _temperature() {
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Icon(
             Icons.wb_sunny,
             color: Colors.yellow,
           ),
-          SizedBox(
-            width: 16.0,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        ],
+      ),
+      SizedBox(
+        width: 16.0,
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Text(
-                    '-7C Clear',
-                    style: TextStyle(color: Colors.deepPurple),
-                  ),
-                ],
+              Text(
+                '-7C Clear',
+                style: TextStyle(color: Colors.deepPurple),
               ),
-              Row(
-                children: <Widget>[
-                  Text(
-                    'Samara region, Samara',
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              )
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Text(
+                'Samara region, Samara',
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
             ],
           )
         ],
       ),
     ],
+  );
+}
+
+Wrap _temperatureForecast() {
+  return Wrap(
+    spacing: 10.0,
+    children: List.generate(7, (int index) {
+      return Chip(
+        label: Text(
+          '${ - index + 1}C',
+          style: TextStyle(
+            fontSize: 15.0,
+          ),
+        ),
+      );
+    }),
   );
 }
