@@ -1,5 +1,23 @@
 # flutter_weather
 
+Structural_scheme App
+![til](./structural_scheme.png)
+
+Structural_scheme AppBar
+![til](./structural_scheme_AppBar.png)
+
+Structural_scheme Weather Description
+![til](./structural_scheme_weather.png)
+
+Structural_scheme Temperature
+![til](./structural_scheme_weather_tem.png)
+
+Structural_scheme Temperature Forecast
+![til](./structural_scheme_weather_temFor.png)
+
+Structural_scheme Footer
+![til](./structural_scheme_weather_footer.png)
+
 A new Flutter project.
 
 ## Getting Started
