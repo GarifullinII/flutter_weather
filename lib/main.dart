@@ -92,6 +92,7 @@ Column _weatherDescription() {
 
 Row _temperature() {
   return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       Column(
         children: <Widget>[
