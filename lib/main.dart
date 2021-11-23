@@ -43,6 +43,9 @@ Widget _buildBody() {
     child: Column(
       children: <Widget>[
         _headerImage(), // реализуем отдельно данный виджет
+        SafeArea(child: Padding(
+          padding: EdgeInsets.all(16),
+        )),
         _weatherDescription(), // реализуем отдельным виджетом описание погоды
       ],
     ),
