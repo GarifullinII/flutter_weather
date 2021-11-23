@@ -142,11 +142,19 @@ Wrap _temperatureForecast() {
     children: List.generate(7, (int index) {
       return Chip(
         label: Text(
-          '${ - index + 1}C',
+          '${-index + 1}C',
           style: TextStyle(
             fontSize: 15.0,
           ),
         ),
+        avatar: Icon(
+          Icons.wb_cloudy,
+          color: Colors.blue.shade200,
+        ),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+          4.0,
+        )),
       );
     }),
   );
