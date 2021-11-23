@@ -1,5 +1,6 @@
 # flutter_weather
 
+![til](./weather.gif)
 ## Structural_scheme App
 
 ![til](./structural_scheme.png)
